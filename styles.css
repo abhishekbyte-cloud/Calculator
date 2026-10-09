@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+*{
+    font-family: 'Orbitron', sans-serif;
+}
+
 body{
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    font-family: "Oswald", sans-serif;
+    background-color: rgba(10, 10, 14, 1);
 }
 
 .main{
@@ -13,14 +19,17 @@ body{
     flex-direction: column;
     width: 325px;
     height: 400px;
-    background-color: rgb(23, 24, 26);
-    border: 1px solid black;
+    background-color: rgba(18,18,24,0.8);
+    border: 1px solid rgba(60, 60, 75, 1);
 }
 
 input{
+    background-color: rgba(22, 22, 28, 0.9);
+    border: none;
     border-radius: 7px;
     padding: 0px 8px;
     font-size: 30px;
+    color: rgba(255, 255, 255, 0.92);;
     text-align: end;
     display: block;
     margin: 10px auto;
@@ -45,25 +54,31 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
     width: 67px;
     height: 47px;
     border-radius: 7px;
-    background-color: rgb(144, 144, 144);
+    background-color: rgba(38, 38, 45, 1);
+    color: rgba(255, 255, 255, 0.92);
+    border: none;
 }
 
-.btn:hover{
-    background-color: #dcdcdc;
+.btn:hover {
+  background: rgba(60, 60, 75, 1);
 }
 
 .operator-btn{
-    background-color: rgb(225, 132, 3);
+    background-color: rgba(255, 153, 0, 0.2);
+    color: rgba(255, 153, 0, 1);
+    border: none;
 }
 
-.operator-btn:hover{
-    background-color: rgb(255, 172, 55);
+.operator-btn:hover {
+  background-color: rgba(255, 153, 0, 0.35);
 }
 
-.top-btn{
-    background-color: rgb(237, 237, 237);
+.equal-btn {
+  background: rgba(255, 153, 0, 1);
+  color: rgba(255, 255, 255, 1);
+  border: none;
 }
 
-.top-btn:hover{
-    background-color: rgb(255, 255, 255);
+.equal-btn:hover {
+  background: rgba(255, 153, 0, 0.85);
 }
