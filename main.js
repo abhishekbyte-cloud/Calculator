@@ -1,13 +1,12 @@
-let expression = document.querySelector("input")
-let numBtn = document.querySelectorAll(".num-btn")
-let equalBtn = document.querySelector(".equal-btn")
-let clearBtn = document.querySelector(".clear-btn")
-let delBtn = document.querySelector(".del-btn")
+const expression = document.querySelector("input")
+const numBtn = document.querySelectorAll(".num-btn")
+const equalBtn = document.querySelector(".equal-btn")
+const clearBtn = document.querySelector(".clear-btn")
+const delBtn = document.querySelector(".del-btn")
 
 let isEvaluatedBefore = false
 
 function printBtn(btnOrKey){
-    expression.style.fontSize = "30px"
     if(!isEvaluatedBefore){
         expression.value += btnOrKey
     }
@@ -26,34 +25,35 @@ function clear(){
 }
 
 function calculate(){
-    if(/[a-zA-z]/.test(expression.value)){
-        expression.value = "Not a Valid Operation"
-        expression.style.fontSize = "20px"
+    if(expression.value === ""){
+        expression.value = "Nothing to Calculate"
     }
     else{
-        if(expression.value != ""){
-            let val = expression.value
-            let result = eval(expression.value)
-            if(isNaN(result)){
-                expression.value = "Undefined"
+        try{
+            const result = eval(expression.value)
+
+            if(result === Infinity || result === -Infinity){
+                expression.value = result
             }
-            else if(Math.round(result)==result){
-                expression.value = Math.round(result)
+            else if((!Number.isFinite(result))){
+                expression.value = "undefined"
             }
             else{
                 expression.value = result
             }
         }
-        else{
-            expression.value = "Nothing to Calculate"
-            expression.style.fontSize = "20px"
+        catch{
+            if(expression.value !== "Nothing to Calculate" && expression.value !== "undefined"){
+                expression.value = "Not a Valid Operation"
+            }
         }
     }
     isEvaluatedBefore = true
 }
 
 document.addEventListener("keydown", function(event){
-    if(/^[0-9+*\/.()%{}\[\]-]$/.test(event.key)){
+    const allowedKeys = "0123456789+-*/.%"
+    if(allowedKeys.includes(event.key)){
         event.preventDefault()
         printBtn(event.key)
     }

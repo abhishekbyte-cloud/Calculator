@@ -52,18 +52,18 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
     background-color: #dcdcdc;
 }
 
-#operator-btn{
+.operator-btn{
     background-color: rgb(225, 132, 3);
 }
 
-#operator-btn:hover{
+.operator-btn:hover{
     background-color: rgb(255, 172, 55);
 }
 
-#top-btn{
+.top-btn{
     background-color: rgb(237, 237, 237);
 }
 
-#top-btn:hover{
+.top-btn:hover{
     background-color: rgb(255, 255, 255);
 }
