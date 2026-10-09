@@ -1,0 +1,69 @@
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: "Oswald", sans-serif;
+}
+
+.main{
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    flex-direction: column;
+    width: 325px;
+    height: 400px;
+    background-color: rgb(23, 24, 26);
+    border: 1px solid black;
+}
+
+input{
+    border-radius: 7px;
+    padding: 0px 8px;
+    font-size: 30px;
+    text-align: end;
+    display: block;
+    margin: 10px auto;
+    width: 280px;
+    line-height: 60px;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn-row{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn{
+    width: 67px;
+    height: 47px;
+    border-radius: 7px;
+    background-color: rgb(144, 144, 144);
+}
+
+.btn:hover{
+    background-color: #dcdcdc;
+}
+
+#operator-btn{
+    background-color: rgb(225, 132, 3);
+}
+
+#operator-btn:hover{
+    background-color: rgb(255, 172, 55);
+}
+
+#top-btn{
+    background-color: rgb(237, 237, 237);
+}
+
+#top-btn:hover{
+    background-color: rgb(255, 255, 255);
+}
